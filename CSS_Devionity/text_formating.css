@@ -1,0 +1,18 @@
+.bold {
+    font-weight: 800;
+}
+.italic {
+    font-style: italic;
+}
+.underlined {
+    text-decoration: underline;
+}
+.capit {
+    text-transform: capitalize;
+}
+.right {
+    text-align: right;
+}
+.let_spa {
+    letter-spacing: 4px;
+}

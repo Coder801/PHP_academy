@@ -1,0 +1,142 @@
+body {
+	background-color: #dfdad4;
+}
+.login_register_form{
+	width: 680px;
+	height: 480px;
+	margin: 30px auto;
+	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	box-shadow: -5px 5px #cfcbc5,	
+  				5px 5px #cfcbc5;
+}
+.login_form, .register_form {
+	width: 50%;
+	box-sizing: border-box;
+}
+.login_form {
+	background-color: #ffffff;
+	padding-top: 40px;
+}
+.register_form {
+	background-color: #3366ff;
+	padding-top: 40px;
+}
+.login_title, .register_title {
+	color: #ffffff;
+	font-size: 22px;
+	font-family: Raleway;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+.login_title {
+	width: 310px;
+	/*height: 96px;*/
+	position: relative;
+	margin-bottom: 40px;
+	margin-left: -6px;
+	background-color: #3366ff;
+	text-align: center;
+	padding: 35px 0px 35px 0px;
+
+}
+.title {
+	margin-bottom: 40px;
+}
+.for_upper_corner {
+	width: 310px;
+	height: 96px;
+	position: relative;
+	margin-left: -6px;
+	margin-top: -136px;
+	background-color: transparent;
+}
+/*лента нижний изгиб*/
+.login_title:after {
+  	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0;
+	top: 100%;
+	border-width: 3px 3px;
+	border-style: solid;
+	border-color: #2e5ce6 #2e5ce6 transparent transparent ;
+}
+/*лента верхний изгиб*/
+.for_upper_corner:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0;
+	top: -6px;
+	border-width: 3px 3px;
+	border-style: solid;
+	border-color: transparent #2e5ce6 #2e5ce6 transparent ;
+}
+/*загнутый уголок*/
+.login_title:before {
+  	content: '';
+  	position: absolute;
+  	width: 0;
+  	height: 0;
+  	right: 0;
+  	bottom: 0;
+  	border-width: 10px 10px;
+  	border-style: solid;
+  	border-color: #2e5ce6 #fff #fff #2e5ce6;
+}
+.register_title {
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+.forgot {
+	color: #989898;
+	font-family: Roboto;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: #3366ff;
+}
+input {
+	width: 240px;
+	height: 50px;
+	margin-left: 40px;
+	float: left;
+	color: #989898;
+	font-size: 13px;
+	font-family: Roboto;
+	text-transform: uppercase;
+	padding-left: 20px;
+}
+.login_input {
+	border: solid 1.5px #e8e8e8;
+	margin-bottom: 20px;
+}
+.register_input {
+	border-style: solid;
+	border-width: 0px 1px 2px 1px;
+	border-color: #3061f2;
+	margin-bottom: 18px;
+}
+input[value=login], input[value=register]  {
+	color: #ffffff;
+	width: 265px;
+	height: 50px;
+	border-width: 0px 1px 2px 1px;
+	margin-bottom: 40px;
+}
+input[value=login] {
+	background-color: #3366ff;
+	border-color: #3061f2;
+}
+input[value=register] {
+	background-color: #4c79ff;
+	border-color: #3061f2;
+}
+

@@ -1,0 +1,49 @@
+body {
+	background-color: #e5e5e5;
+}
+h2 {
+	color: #403E3F;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 1px;
+	background-color: white;
+}
+header, footer, nav {
+	margin: 20px;
+	padding: 10px;
+}
+header {
+	height: 20px;
+	font-style: italic;
+	text-align: right;
+	background-color: #BCBE97;
+}
+nav {
+	border-top: solid #EDEDED;
+	border-bottom: solid #EDEDED;
+	padding: 10px;
+}
+footer {
+	height: 40px;
+	text-align: center;
+	background-color: #F2F2F2;
+}
+.content {
+	padding: 20px;
+}
+
+.contact-form {
+	width: 700px;
+	padding: 10px;
+	margin: auto;
+	border: solid 2px #444;
+}
+.flower {
+	float: left;
+}
+.flower img {
+	height: 50px;
+	margin-left: 50px;
+}
