@@ -17,5 +17,5 @@
         case "-": echo $a-$b; break;
         case "*": echo $a*$b; break;
         case "/": if ($b==0) {echo "Error! Деление на ноль!";} else {echo $a/$b;}; break;
-        case "%": if ($b==0) {echo "Error! Деление на ноль!";} else {echo $a/$b;}; break;
+        case "%": if ($b==0) {echo "Error! Деление на ноль!";} else {echo $a%$b;}; break;
     }
