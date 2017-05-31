@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4856ee8e-aa19-455b-8528-e33495453c0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend/20_05/php_basics_tasks/15.php" afterPath="$PROJECT_DIR$/Backend/20_05/php_basics_tasks/15.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend/20_05/php_basics_tasks/17.php" afterPath="$PROJECT_DIR$/Backend/20_05/php_basics_tasks/17.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Backend/20_05/get_post.php" afterPath="$PROJECT_DIR$/Backend/20_05/get_post.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,16 +15,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="8.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backend/20_05/php_basics_tasks/8.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="9.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/20_05/php_basics_tasks/9.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,11 +85,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="17.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="17.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/20_05/php_basics_tasks/17.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_post.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Backend/20_05/get_post.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,6 +126,7 @@
         <option value="$PROJECT_DIR$/Backend/20.05/var_var.php" />
         <option value="$PROJECT_DIR$/Backend/20_05/php_basics_tasks/15.php" />
         <option value="$PROJECT_DIR$/Backend/20_05/php_basics_tasks/17.php" />
+        <option value="$PROJECT_DIR$/Backend/20_05/get_post.php" />
       </list>
     </option>
   </component>
@@ -372,12 +372,12 @@
       <workItem from="1496222774251" duration="261000" />
       <workItem from="1496223054857" duration="80000" />
       <workItem from="1496223390962" duration="1647000" />
-      <workItem from="1496248323708" duration="87000" />
+      <workItem from="1496248323708" duration="272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3462000" />
+    <option name="totallyTimeSpent" value="3647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -414,7 +414,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Backend/20.05/cicles.php" />
     <entry file="file://$PROJECT_DIR$/Backend/20.05/cicles_alt.php" />
     <entry file="file://$PROJECT_DIR$/Backend/20.05/const.php" />
     <entry file="file://$PROJECT_DIR$/Backend/20.05/get_post_new.php" />
@@ -641,8 +640,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/20_05/php_basics_tasks/17.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/20_05/get_post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
