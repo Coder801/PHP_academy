@@ -90,7 +90,7 @@ h4 {
 .dot:first-child, .dot:last-child {
      background-color: var(--secondaryColor);
 }
-,dot:first-child{
+.dot:first-child{
      left: 0%;
 }
 .dot:last-child {
@@ -212,9 +212,6 @@ h4 {
  {
    color: #4e4e4e;
    font-size: 16px;
-}
-.exp_value {
-
 }
 /*------------------------------------------------EXPERIENCE AND INFO end------------------------------------------------ */
 .skill {
