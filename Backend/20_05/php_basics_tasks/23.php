@@ -1,4 +1,5 @@
 <?php
     echo "Hello\n";
     print "Hello\n";
-    var_dump("Hello");
+    print_r("Hello\n");
+   # var_dump("Hello");

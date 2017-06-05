@@ -124,18 +124,18 @@ input {
 	border-color: #3061f2;
 	margin-bottom: 18px;
 }
-input[value=login], input[value=register]  {
+input[name=login_submit], input[name=register_submit]  {
 	color: #ffffff;
 	width: 265px;
 	height: 50px;
 	border-width: 0px 1px 2px 1px;
 	margin-bottom: 40px;
 }
-input[value=login] {
+input[name=login_submit] {
 	background-color: #3366ff;
 	border-color: #3061f2;
 }
-input[value=register] {
+input[name=register_submit] {
 	background-color: #4c79ff;
 	border-color: #3061f2;
 }
