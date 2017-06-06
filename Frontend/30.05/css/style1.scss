@@ -9,6 +9,15 @@ $ralewayFont: 'Raleway', sans-serif;
 $dotAmount: 7;
 $dotPosition: 100%/($dotAmount - 1);
 
+@mixin appear {
+   animation-name: appear;
+   animation-duration: 1s;
+   animation-fill-mode: both;
+}
+@keyframes appear {
+   from {transform: scale(1);}
+   to {transform: scale(1.5);}
+}
 body {
    background-color: #415270;
 }
@@ -26,9 +35,9 @@ h4 {
    max-width: 960px;
    box-shadow: 0 0 5px 5px rgba(0,0,0,.3);
    text-align: justify;
-}
-.mainarea > div {
+   & > div {
       padding: 20px 0;
+   }
 }
 .ava {
    text-align: center;
@@ -53,12 +62,12 @@ h4 {
      text-align: center;
      font-size: 22px;
      color: $secondaryColor;
-}
-.position + p {
-      font-family: $robotoFont;
-      color: #313131;
-      font-size: 20px;
-      font-weight: 100;
+     & + p {
+       font-family: $robotoFont;
+       color: #313131;
+       font-size: 20px;
+       font-weight: 100;
+     }
 }
 .timeline {
      background-color: $secondaryColor;
@@ -82,46 +91,45 @@ h4 {
      p, div {
         font-family: $robotoFont;
      }
-  }
-.dot:first-child, .dot:last-child {
+     &:first-child, &:last-child {
         background-color: $secondaryColor;
      }
-@for $i from 1 to 8 {
-  .dot:nth-child(#{$i}) {
-     left: $dotPosition * ($i - 1);
+     @for $i from 1 to 8 {
+       &:nth-child(#{$i}) {
+          left: $dotPosition * ($i - 1);
+       }
+     }
+     @for $j from 2 to 7 {
+       &:nth-child(#{$j}):hover {
+          @include appear;
+       }
+     }
+     & > p {
+          position: absolute;
+          left: -25%;
+          display: block;
+          bottom: 50%;
+     }
+     & > div {
+        display: none;
+     }
+     &:hover > div {
+       display: block;
+       border: 2px solid rgba(233, 119, 108, .85);/*$rimaryColor)*/
+       border-radius: 5px;
+       background-color: rgba(240, 244, 248, .85);
+       padding: 7px;
+       z-index: 101;
+       width: 180px;
+       font-family: $robotoFont;
+       font-size: 8px;
+       top: 110%;
+       position: absolute;
+     }
+     &:nth-child(6):hover > div {
+          right: 1%;
+     }
   }
-}
-@for $j from 2 to 7 {
-  .dot:nth-child(#{$j}):hover {
-     transform: scale(1.5);
-  }
-}
-.dot > p {
-     position: absolute;
-     left: -25%;
-     display: block;
-     bottom: 50%;
-}
-.dot > div {
-     display: none;
-}
-.dot:hover > div {
-     display: block;
-     border: 2px solid rgba(233, 119, 108, .85);/*$rimaryColor)*/
-     border-radius: 5px;
-     background-color: rgba(240, 244, 248, .85);
-     padding: 7px;
-     z-index: 101;
-     width: 180px;
-     font-family: $robotoFont;
-     font-size: 8px;
-     top: 110%;
-     position: absolute;
-
-}
-.dot:nth-child(6):hover > div {
-     right: 1%;
-}
 .title {
      display: block;
      background-color: $secondaryColor;
@@ -131,26 +139,26 @@ h4 {
      color: white;
      margin: 0 0 10px 0;
      position: relative;
+     &.is-arrow:before, &.is-arrow:after {
+        content: '';
+       width: 40px;
+       height: 50%;
+       right: -9px;
+       position: absolute;
+       background: linear-gradient(270deg, $secondaryColor 0%, $secondaryColor 25%,
+                                           $backgroundColor 25%, $backgroundColor 50%,
+                                           $secondaryColor 50%, $secondaryColor 75%,
+                                           $backgroundColor 75%, $backgroundColor 100%);
+     }
+     &.is-arrow:before {
+        top: 0;
+        transform: skewX(-45deg);
+     }
+     &.is-arrow:after {
+       bottom: 0;
+       transform: skewX(45deg);
+      }
 }
-.title.is-arrow:before, .title.is-arrow:after {
-  content: '';
-  width: 40px;
-  height: 50%;
-  right: -9px;
-  position: absolute;
-  background: linear-gradient(270deg, $secondaryColor 0%, $secondaryColor 25%,
-                                      $backgroundColor 25%, $backgroundColor 50%,
-                                      $secondaryColor 50%, $secondaryColor 75%,
-                                      $backgroundColor 75%, $backgroundColor 100%);
-}
-.title.is-arrow:before {
-  top: 0;
-  transform: skewX(-45deg);
-}
-.title.is-arrow:after {
-  bottom: 0;
-  transform: skewX(45deg);
- }
  .list {
       margin: 0;
       padding: 0;
@@ -194,52 +202,49 @@ h4 {
  .skill {
       display: block;
       overflow: hidden;
- }
- .skill > p {
-      width: 65%;
-      float: left;
-      margin: 0;
-      font-family: $robotoFont;
- }
- .skill > .raiting {
-      float: left;
-      width: 35%;
-      margin-top: 7px;
- }
- .raiting {
-      display: flex;
-      justify-content: space-around;
- }
- .raiting > span {
-      width: 8px;
-      height: 8px;
-      display: block;
-      float: left;
-      border-radius: 10px;
-      border: 1px solid $primaryColor;
- }
- .raiting.active_1 > span:nth-child(-n+1) {
-      background-color: $primaryColor;
- }
- .raiting.active_2 > span:nth-child(-n+2) {
-      background-color: $primaryColor;
- }
- .raiting.active_3 > span:nth-child(-n+3) {
-      background-color: $primaryColor;
- }
- .raiting.active_4 > span:nth-child(-n+4) {
-      background-color: $primaryColor;
- }
- .raiting.active_5 > span:nth-child(-n+5) {
-      background-color: $primaryColor;
- }
+      & > p {
+         width: 65%;
+         float: left;
+         margin: 0;
+         font-family: $robotoFont;
+      }
+      & > .raiting {
+         float: left;
+         width: 35%;
+         margin-top: 7px;
+         display: flex;
+         justify-content: space-around;
+         & > span {
+            width: 8px;
+            height: 8px;
+            display: block;
+            float: left;
+            border-radius: 10px;
+            border: 1px solid $primaryColor;
+         }
+         &.active_1 > span:nth-child(-n+1) {
+             background-color: $primaryColor;
+         }
+         &.active_2 > span:nth-child(-n+2) {
+             background-color: $primaryColor;
+         }
+         &.active_3 > span:nth-child(-n+3) {
+             background-color: $primaryColor;
+         }
+         &.active_4 > span:nth-child(-n+4) {
+             background-color: $primaryColor;
+         }
+         &.active_5 > span:nth-child(-n+5) {
+             background-color: $primaryColor;
+         }
+      }
+   }
  .hobbie {
     text-align: center;
     padding: 0;
     margin: 0px 8px 0px 8px;
- }
- .hobbie > img {
-    display: block;
-    margin: auto;
-
+    & > img {
+       display: block;
+       margin: auto;
+    }
  }
