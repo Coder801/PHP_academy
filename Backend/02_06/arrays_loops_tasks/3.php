@@ -1,7 +1,7 @@
 <?php
-    $elements = [1, 20, 15, 17, 24, 35];
+    $elements = [26, 17, 136, 12, 79, 15];
     $result = 0;
     foreach ($elements as $item) {
-        $result +=  $item;
+        $result +=  $item*$item;
     }
     echo $result;

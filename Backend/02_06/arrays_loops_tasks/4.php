@@ -4,11 +4,10 @@
         "red" => "красный",
         "blue" => "голубой"
     ];
-    $en = [];
-    $ru = [];
     foreach ($arr as $key => $value) {
-        array_push($en, $key);
-        array_push($ru, $value);
+        echo $key . "<br/>";
     }
-    print_r($en);
-    print_r($ru);
+    echo "<hr/>";
+    foreach ($arr as $key => $value) {
+        echo $value . "<br/>";
+    }

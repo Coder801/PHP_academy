@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: andrewmatiyko
- * Date: 06.06.17
- * Time: 00:27
- */
+ $arr = [
+     "Коля" => 200,
+     "Вася" => 300,
+     "Петя" => 400,
+ ];
+ foreach ($arr as $key => $value) {
+     echo "$key - зарплата $value долларов"."<br/>";
+ }

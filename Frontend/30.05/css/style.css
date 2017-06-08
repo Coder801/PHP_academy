@@ -70,7 +70,7 @@ h4 {
      position: relative;
      display: flex;
      justify-content: space-between;
-     margin-right: 22px;
+     /*margin-right: 22px;*/
 }
 
 .dot {
@@ -86,6 +86,7 @@ h4 {
 }
 .dot p, .dot div {
      font-family: var(--robotoFont);
+
 }
 .dot:first-child, .dot:last-child {
      background-color: var(--secondaryColor);
