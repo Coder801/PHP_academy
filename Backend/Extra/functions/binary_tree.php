@@ -1,5 +1,8 @@
 <?php
-$arr = [1, 1, 1, 1, 2, 1, 1, 3, 3, 1, 1, 4, 6, 4, 1, 1, 5, 10, 10, 5, 1];
+for ($i=0; $i<=20; $i++) {
+    $arr[$i] = rand(0, 10000);
+    echo $arr[$i] . ' ';
+}
 
 function binary_tree_print($a)
 {
@@ -18,3 +21,4 @@ function binary_tree_print($a)
     echo '</div>';
 }
 binary_tree_print($arr);
+
