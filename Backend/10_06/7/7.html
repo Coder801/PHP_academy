@@ -1,0 +1,15 @@
+<?php if(count($guestBook) != 0): ?>
+<?php foreach ($guestBook as $item): ?>
+
+<p> <?= $item ?> </p><br>
+
+<?php endforeach; ?>
+<?php endif; ?>
+
+
+<form  action="7.php" method="POST">
+   <label for="text1">Field 1:
+      <textarea name="text1" id="text1" rows="8" cols="80"></textarea>
+   </label>
+   <input type="submit">
+</form>

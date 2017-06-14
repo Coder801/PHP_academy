@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+   <head lang="en">
+      <meta charset="utf-8">
+
+      <title>Feedback</title>
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+   </head>
+   <body>
+         <form class="container" action="feedback.php" method="POST">
+               <div class="row field">
+                  <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4
+                              col-xs-offset-1 col-sm-offset-3 col-md-offset-4 col-lg-offset-4">
+                     <label for="name">
+                        <input class="input" type="text" name="name" id="name" required="required">
+                        <span class="label">Enter your name, please:</span>
+                     </label>
+                  </div>
+               </div>
+               <div class="row field">
+                  <div class="col-xs-10 col-sm-6 col-md-4 col-lg-4
+                              col-xs-offset-1 col-sm-offset-3 col-md-offset-4 col-lg-offset-4">
+                     <label for="email">
+                        <input class="input" type="text" name="email" id="email" required="required">
+                        <span class="label">Enter your email, please:</span>
+                     </label>
+                  </div>
+               </div>
+               <div class="row field">
+                  <div class="line col-xs-10 col-sm-6 col-md-4 col-lg-4
+                  col-xs-offset-1 col-sm-offset-3 col-md-offset-4 col-lg-offset-4">
+                  </div>
+               </div>
+               <div class="row field">
+                  <div class="message col-xs-10 col-sm-6 col-md-4 col-lg-4
+                  col-xs-offset-1 col-sm-offset-3 col-md-offset-4 col-lg-offset-4">
+                     <label for="message">
+                        <span class="message_label">Leave your message here...</span>
+                        <textarea class="message_field" name="message" id="message" required="required"></textarea>
+                     </label>
+                  </div>
+               </div>
+               <div class="row field">
+                  <div class="btn col-xs-4 col-sm-4 col-md-2 col-lg-2
+                              col-xs-offset-4 col-sm-offset-4 col-md-offset-5 col-lg-offset-5">
+                     <input type="submit" name="submit_btn" value="SEND">
+                  </div>
+               </div>
+         </form>
+
+         <div class="row field">
+            <div class="line col-xs-10 col-sm-10 col-md-10 col-lg-10
+            col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+            </div>
+         </div>
+
+
+         <div class="container">
+            <div class="row">
+               <?php if(count($comments) != 0):?>
+               <?php foreach($comments as $item):
+               $item = json_decode($item, true);?>
+               <div class="comment col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                  <div class="text">
+                     <p>
+                        <?= $item['message'] ;?>
+                     </p>
+                  </div>
+                  <div class="author">
+                     <a href="mailto: <?= $item['email'] ?> ">
+                        <?= $item['name']; ?>
+                     </a><br>
+                <span>
+                    <?= date('H:i d-m-Y', $item['date']); ?>
+                </span>
+                  </div>
+               </div>
+            <?php endforeach; ?>
+            <?php endif?>
+            </div>
+         </div>
+
+   </body>
+</html>

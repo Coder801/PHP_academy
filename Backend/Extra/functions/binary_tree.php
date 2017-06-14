@@ -24,20 +24,23 @@ for ($i=0; $i<=20; $i++) {
 
 function binary_tree_sort($a)
 {
-    $binary_tree = [ $parent => $a[0];]
-
-//    $parent = $a[0];
-//    $left_child = $a[1];
-//    $right_child = $a[2];
-//    $binary_tree = [
-//        $parent => [
-//            $left_child =>[],
-//            $right_child => []
-//        ]
-//    ];
-//    echo '<pre>';
-//    print_r($binary_tree);
-//    echo '</pre>';
+    $tree = [
+        $main => [],
+        $left => [],
+        $firht => []
+    ];
+    $right=[];
+    $left=[];
+    for ($i = 0; $i <=2; $i++) {
+        $main =$a[0];
+        if ($a[1] > $a[2]) {
+            $left[$main] = $a[2];
+            $right[$main] = $a[1];
+        } else {
+            $left[$main] = $a[1];
+            $right[$main] = $a[2];
+        }
+    }
 
 }
 binary_tree_sort($arr);

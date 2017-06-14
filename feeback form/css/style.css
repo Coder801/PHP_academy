@@ -1,0 +1,115 @@
+html {
+  font-family: "Slabo 27px", serif; }
+
+form {
+  margin-top: 60px;
+  padding: 40px; }
+  form .field {
+    margin-bottom: 40px; }
+    form .field label {
+      display: block; }
+
+input {
+  height: 50px;
+  margin: 20px auto;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 20px;
+  font-size: 13px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 1px 0px 0px #989898;
+  color: #989898; }
+  input[type=submit] {
+    background-color: #2776e5;
+    text-align: center;
+    padding: 0;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 1px 2px blue;
+    cursor: pointer; }
+
+.label {
+  position: absolute;
+  top: 50%;
+  font-size: 14px;
+  color: #989898;
+  text-transform: uppercase;
+  cursor: text;
+  margin-left: 20px;
+  transform: translateY(-50%); }
+
+.input:focus + .label,
+.input:valid + .label {
+  top: -19px;
+  font-size: 10px;
+  transition: 0.3s ease 0s; }
+
+.input:focus + .label {
+  opacity: 1;
+  transition: 0.3s ease 0s; }
+
+.input:focus, .input:valid {
+  box-shadow: 0px 1px 0px 0px #2776e5;
+  transition: 0.3s ease 0s; }
+
+@media (max-width: 350px) {
+  .label {
+    font-size: 50%;
+    margin-left: 0; } }
+@media (max-width: 150px) {
+  .label {
+    font-size: 30%;
+    margin-left: 0; } }
+.line {
+  height: 1px;
+  box-shadow: 1px 1px 1px 0px #989898; }
+
+.message_label {
+  font-size: 14px;
+  color: #989898;
+  text-transform: uppercase;
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 10px; }
+
+.message_field {
+  border: none;
+  box-shadow: 0px 1px 0px 0px #989898;
+  color: #989898;
+  font-size: 12px;
+  width: 100%;
+  outline: none;
+  height: 80px; }
+
+.comment {
+  margin-top: 40px; }
+
+.text {
+  background-color: #2776e5;
+  color: white;
+  font-size: 14px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  position: relative; }
+  .text:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 12%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #2776e5 transparent transparent; }
+
+.author {
+  color: #2776e5;
+  padding: 20px; }
+  .author a {
+    color: #2776e5; }
+
+/*# sourceMappingURL=style.css.map */
