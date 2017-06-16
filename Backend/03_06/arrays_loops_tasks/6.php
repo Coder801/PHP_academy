@@ -11,4 +11,5 @@
         array_push($ru, $value);
     }
     print_r($en);
+    echo '<br>';
     print_r($ru);

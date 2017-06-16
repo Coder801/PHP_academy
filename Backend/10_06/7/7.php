@@ -1,9 +1,12 @@
 <?php
+$comments = file_get_contents('db.txt');
+$comments = explode("\n", trim($comments));
+
+require_once "7.html";
 
 if ($_SERVER['REQUEST METHOD'] = ['POST']) {
    $text = $_POST['text1'];
-   $guestBook = [];
-   array_push($guestBook, $text);
+   file_put_contents('db.txt', $text. PHP_EOL, FILE_APPEND );
 }
 
 require_once "7.html";
