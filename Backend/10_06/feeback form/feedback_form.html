@@ -59,7 +59,7 @@
 
          <div class="container">
             <div class="row">
-               <?php if(count($comments) != 0):?>
+               <?php if(count($comments) > 0):?>
                <?php foreach($comments as $item):
                $item = json_decode($item, true);?>
                <div class="comment col-xs-12 col-sm-6 col-md-4 col-lg-4">

@@ -1,7 +1,0 @@
-{"name":"andrew.matiyko","email":"andrew.matiyko@gmail.com","message":"sdmfsad;,fjdas;fjdsa'fdska'fkfdsa'f","submit_btn":"SEND","date":1497273649}
-{"name":"andrew.matiyko","email":"andrew.matiyko@gmail.com","message":"sdmfsad;,fjdas;fjdsa'fdska'fkfdsa'f","submit_btn":"SEND","date":1497273654}
-{"name":"andrew","email":"andrew.matiyko@gmail.com","message":"Helloworld","submit_btn":"SEND","date":1497274071}
-{"name":"andsa","email":"a',a'f.xa'@j.com","message":"a,xakwf","submit_btn":"SEND","date":1497275040}
-{"name":"dsfsd;fmas","email":"asf;aksdfas@gt.com","message":"sad;fjad","submit_btn":"SEND","date":1497275058}
-{"name":"dsfsd;fmas","email":"asf;aksdfas@gt.com","message":"sad;fjad","submit_btn":"SEND","date":1497275067}
-{"name":"dsfsd;fmas","email":"asf;aksdfas@gt.com","message":"sad;fjad","submit_btn":"SEND","date":1497275079}

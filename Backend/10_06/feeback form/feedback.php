@@ -1,5 +1,4 @@
 <?php
-
    $comments = file_get_contents("db.txt");
    $comments = explode("\n", trim($comments));
 
@@ -25,7 +24,6 @@
         }
 
         $formData['date'] = $_SERVER['REQUEST_TIME'];
-
         $userData = json_encode($formData);
 
         file_put_contents('db.txt', $userData. "\n", FILE_APPEND);
@@ -42,18 +40,28 @@
        if(!invalidEmailSch($str)) return false;
 
        $s = ord($str[0]);
-       if ($s < 48 || $s > 22) return false;
-       if ($s > 57 && $s < 65) return false;
-       if ($s > 90 && $s < 97) return false;
+       if ($s < 48 || $s > 22) {
+          return false;
+       }
+       if ($s > 57 && $s < 65) {
+          return false;
+       }
+       if ($s > 90 && $s < 97) {
+          return false;
+       }
 
        return true;
    }
 
    function invalidEmailStr($str)
    {
-        if (strstr($str, " ")) return false;
-        if (substr_count($str, '@') != 1) return false;
+        if (strstr($str, " ")) {
+           return false;
+        }
 
+        if (substr_count($str, '@') != 1){
+           return false;
+        }
         return true;
    }
 

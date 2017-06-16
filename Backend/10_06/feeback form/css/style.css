@@ -11,7 +11,7 @@ form {
 
 input {
   height: 50px;
-  margin: 20px auto;
+  margin: 0px auto 20px auto;
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -21,19 +21,21 @@ input {
   outline: none;
   border: none;
   box-shadow: 0px 1px 0px 0px #989898;
-  color: #989898; }
-  input[type=submit] {
-    background-color: #2776e5;
-    text-align: center;
-    padding: 0;
-    color: white;
-    border-radius: 7px;
-    box-shadow: 0px 0px 1px 2px blue;
-    cursor: pointer; }
+  color: #989898;
+  font-family: "Slabo 27px", serif; }
+
+input[type=submit] {
+  background-color: #2776e5;
+  text-align: center;
+  padding: 0;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0px 0px 1px 2px blue;
+  cursor: pointer; }
 
 .label {
   position: absolute;
-  top: 50%;
+  top: 40%;
   font-size: 14px;
   color: #989898;
   text-transform: uppercase;
@@ -43,7 +45,7 @@ input {
 
 .input:focus + .label,
 .input:valid + .label {
-  top: -19px;
+  top: -9px;
   font-size: 10px;
   transition: 0.3s ease 0s; }
 
@@ -55,14 +57,6 @@ input {
   box-shadow: 0px 1px 0px 0px #2776e5;
   transition: 0.3s ease 0s; }
 
-@media (max-width: 350px) {
-  .label {
-    font-size: 50%;
-    margin-left: 0; } }
-@media (max-width: 150px) {
-  .label {
-    font-size: 30%;
-    margin-left: 0; } }
 .line {
   height: 1px;
   box-shadow: 1px 1px 1px 0px #989898; }
@@ -111,5 +105,14 @@ input {
   padding: 20px; }
   .author a {
     color: #2776e5; }
+
+@media (max-width: 350px) {
+  .label {
+    font-size: 50%;
+    margin-left: 0; } }
+@media (max-width: 150px) {
+  .label {
+    font-size: 30%;
+    margin-left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

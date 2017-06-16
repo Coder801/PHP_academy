@@ -17,7 +17,7 @@ form {
 }
 input {
     height: 50px;
-    margin: 20px auto;
+    margin: 0px auto 20px auto;
     position: relative;
     display: block;
     box-sizing: border-box;
@@ -42,7 +42,7 @@ input[type=submit] {
 }
 .label{
     position: absolute;
-    top: 50%;
+    top: 40%;
     font-size: 14px;
     color: $mainFontColor;
     text-transform: uppercase;
@@ -52,7 +52,7 @@ input[type=submit] {
 }
 .input:focus+.label,
 .input:valid+.label {
-    top: -19px;
+    top: -9px;
     font-size: 10px;
     transition: 0.3s ease 0s;
 }
@@ -63,18 +63,6 @@ input[type=submit] {
 .input:focus, .input:valid,  {
    box-shadow: 0px 1px 0px 0px $mainColor;
    transition: 0.3s ease 0s;
-}
-@media (max-width: 350px){
-   .label {
-      font-size: 50%;
-      margin-left: 0;
-   }
-}
-@media (max-width: 150px){
-   .label {
-      font-size: 30%;
-      margin-left: 0;
-   }
 }
 .line {
    height: 1px;
@@ -125,5 +113,17 @@ input[type=submit] {
    padding: 20px;
    a{
       color: $mainColor;
+   }
+}
+@media (max-width: 350px){
+   .label {
+      font-size: 50%;
+      margin-left: 0;
+   }
+}
+@media (max-width: 150px){
+   .label {
+      font-size: 30%;
+      margin-left: 0;
    }
 }
