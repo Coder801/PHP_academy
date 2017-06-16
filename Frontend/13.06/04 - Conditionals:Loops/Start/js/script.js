@@ -7,7 +7,7 @@ console.clear();
 
 // * Your code Start *
 var phoneNumber = prompt('Введите ваш номер телефона: ');
-if((phoneNumber.length  >= 9) && (phoneNumber.length  <= 11)) {
+if((phoneNumber.length  >== 9) && (phoneNumber.length  <== 11)) { // строго сравнени предпочтительнее использовать всегда
 	console.info('Телефон ввеен верно');
 } else {
 	console.info('Телефон введен не верно');
@@ -28,9 +28,8 @@ var objectA = {
 var objectB = {};
 
 // * Your code Start *
-for (var keyA in objectA) {
-	var keyB = keyA;
-	objectB[keyB] = objectA[keyA];
+for (var key in objectA) {
+	objectB[key] = objectA[key]; // Можно сделать короче, без использования лишней переменной
 }
 
 
@@ -60,44 +59,44 @@ var year = date.getFullYear(); // Текущий год
 var monthName = ''; // Переменная для значения
 
 // * Your code Start *
-switch (true) {
-	case month == 0:
+switch (month) {
+	case 0:
 		monthName = 'Января';
 		break;
-	case month == 1:
+	case 1:
 		monthName = 'Февраля';
 		break;
-	case month == 2:
+	case 2:
 		monthName = 'Марта';
 		break;
-	case month == 3:
+	case 3:
 		monthName = 'Апреля';
 		break;
-	case month == 4:
+	case 4:
 		monthName = 'Мая';
 		break;
-	case month == 5:
+	case 5:
 		monthName = 'Июня';
 		break;
-	case month == 6:
+	case 6:
 		monthName = 'Июля';
 		break;
-	case month == 7:
+	case 7:
 		monthName = 'Августа';
 		break;
-	case month == 8:
+	case 8:
 		monthName = 'Сентября';
 		break;
-	case month == 9:
+	case 9:
 		monthName = 'Октября';
 		break;
-	case month == 10:
+	case 10:
 		monthName = 'Ноября';
 		break;
-	case month == 11:
+	case 11:
 		monthName = 'Декабря';
 		break;
-}
+} // Можно тоже написать короче
 
 
 // * Your code End *
@@ -144,6 +143,9 @@ do {
 		}
 	}
 }while(!check);
+	
+// Отлично, но можно было вместо переменной "check" использовать дерективу break c меткой
+console.log(`Today is: ${day} ${monthName} ${year}`)
 
 
 // * Your code End *
