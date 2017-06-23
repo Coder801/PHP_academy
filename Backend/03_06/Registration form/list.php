@@ -12,3 +12,4 @@
      echo 'E-Mail: '. $a['email'] . '<br/>';
      echo '<hr/>';
  }
+?>

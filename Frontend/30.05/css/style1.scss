@@ -14,10 +14,55 @@ $dotPosition: 100%/($dotAmount - 1);
    animation-duration: 1s;
    animation-fill-mode: both;
 }
+
+
+
 @keyframes appear {
    from {transform: scale(1);}
    to {transform: scale(1.5);}
 }
+@-webkit-keyframes avaAppear {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes avaAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes timelineWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes dotNames {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
 body {
    background-color: #415270;
 }
@@ -42,12 +87,17 @@ h4 {
 .ava {
    text-align: center;
    padding-bottom: 0;
+   opacity: 0;
+   opacity: 0;
+      -webkit-animation: avaAppear 1.5s ease-in-out 2s forwards;
+               animation: avaAppear 1.5s ease-in-out 2s forwards;
    img {
       border-radius: 500px;
       max-width: 100%;
       border: 5px solid $primaryColor;
-   }
+  }
 }
+   
 .name {
      text-align: center;
      font-weight: bold;
@@ -76,6 +126,9 @@ h4 {
      display: flex;
      justify-content: space-between;
      margin-right: 22px;
+     width: 0;
+     -webkit-animation: timelineWidth 2s ease-in-out 1s forwards;
+               animation: timelineWidth 2s ease-in-out 1s forwards;
 }
 
 .dot {
@@ -109,6 +162,9 @@ h4 {
           left: -25%;
           display: block;
           bottom: 50%;
+          opacity: 0;
+          -webkit-animation: dotNames 2s ease-in-out 1.2s forwards;
+                animation: dotNames 2s ease-in-out 1.2s forwards;
      }
      & > div {
         display: none;

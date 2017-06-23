@@ -9,6 +9,4 @@ if ($_SERVER['REQUEST METHOD'] = ['POST']) {
    file_put_contents('db.txt', $text. PHP_EOL, FILE_APPEND );
 }
 
-require_once "7.html";
-
 ?>
