@@ -147,3 +147,81 @@ do {
 
 
 // * Your code End *
+
+
+// ## 4
+// Создайте беспрерывный цикл который принимает от пользователя числа, и суммирует
+// Цикл прирывается только в том случае если пользователь ввел что либо кроме числа
+// После прерывания цикла выводится сумма введеных чисел
+
+//var sumArray = prompt('Please enter number', 0);
+
+// * Your code Start *
+var sum = 0;
+var check = true;
+do {
+	var sumArray = prompt('Please enter number', 0);
+	if (isNaN(sumArray)) {
+		console.info('##4 Сумма чисел равна: ' + sum);
+		check = false;
+	} else {
+		sum += parseInt(sumArray);
+	}
+} while (check);
+
+
+// * Your code End *
+
+// ## 5
+// Найдите сумму  1 + 2 + 3 + ... + N, где число N вводится пользователем из prompt
+
+var summetNumber = prompt('Please enter number', 0);
+
+// * Your code Start *
+var sum = 0;
+for (var i = parseInt(summetNumber); i > 0; i-- ) {
+	sum += i;
+}
+console.info('##5 Сумма чисел равна: ' + sum);
+// * Your code End *
+
+
+// ## 6
+// Нарисовать шахматную доску используя вложенные циклы (Доска находится в файле html)
+// Размер шахматной доски стандартны 8х8
+// Функция drawFractions - вспомогательная, при ее вызове в к блоку board в html добаляется 1 квардрат доски
+// Ее можно не трогать
+// Например что бы нарисовать 1 квадрат нужно вызвать ее 1 раз: drawFraction();
+// Так же доски должны иметь черный\белый цвет. Реализовать это можно при помощи как css так и js
+
+
+var drawFraction = function(){
+  const board = document.querySelector('.board');
+  const fraction = document.createElement('div');
+  board.appendChild(fraction);
+}
+
+const size = 8;
+// * Your code Start *
+// Создаем сетку клеток
+var board1 = document.getElementsByClassName('board')[0];
+var boardElement = board1.getElementsByTagName('div');
+for (var i = 0; i < size * size; i++) {
+		drawFraction();
+}
+// зарисовываем нужные клетки черным цветом
+for ( t=0; t < size; t++){
+	for (var i =0 ; i< size; i++){
+		elNum = i + size * t;
+		if (t % 2 == 0) {
+			if (i % 2 == 0 ) {
+				boardElement[elNum].style.backgroundColor = "black";
+			}
+		} else {
+			if (i % 2 != 0) {
+				boardElement[elNum].style.backgroundColor = "black";
+			}
+		}
+	}
+}
+// * Your code End *
