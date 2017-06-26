@@ -6,7 +6,7 @@ console.clear();
 // Длинна номера не должна быть не меньше 9 и не больше 11
 
 // * Your code Start *
-var phoneNumber = prompt('Введите ваш номер телефона: ');
+var phoneNumber = prompt('Введите ваш номер телефона: ', 0); // Дефолное значение лучше указывать. Или может быть ошибка в ие
 if((phoneNumber.length  >= 9) && (phoneNumber.length  <= 11)) {
 	console.info('Телефон ввеен верно');
 } else {
@@ -29,8 +29,7 @@ var objectB = {};
 
 // * Your code Start *
 for (var keyA in objectA) {
-	var keyB = keyA;
-	objectB[keyB] = objectA[keyA];
+	objectB[keyA] = objectA[keyA]; // Можно без промежуточной переменной
 }
 
 
@@ -60,44 +59,44 @@ var year = date.getFullYear(); // Текущий год
 var monthName = ''; // Переменная для значения
 
 // * Your code Start *
-switch (true) {
-	case month == 0:
+switch (month) {
+	case 0:
 		monthName = 'Января';
 		break;
-	case month == 1:
+	case 1:
 		monthName = 'Февраля';
 		break;
-	case month == 2:
+	case 2:
 		monthName = 'Марта';
 		break;
-	case month == 3:
+	case 3:
 		monthName = 'Апреля';
 		break;
-	case month == 4:
+	case 4:
 		monthName = 'Мая';
 		break;
-	case month == 5:
+	case 5:
 		monthName = 'Июня';
 		break;
-	case month == 6:
+	case 6:
 		monthName = 'Июля';
 		break;
-	case month == 7:
+	case 7:
 		monthName = 'Августа';
 		break;
-	case month == 8:
+	case 8:
 		monthName = 'Сентября';
 		break;
-	case month == 9:
+	case 9:
 		monthName = 'Октября';
 		break;
-	case month == 10:
+	case 10:
 		monthName = 'Ноября';
 		break;
-	case month == 11:
+	case 11:
 		monthName = 'Декабря';
 		break;
-}
+} // Можно короче сделать)
 
 
 // * Your code End *
@@ -204,7 +203,7 @@ var drawFraction = function(){
 const size = 8;
 // * Your code Start *
 // Создаем сетку клеток
-var board1 = document.getElementsByClassName('board')[0];
+var board1 = document.getElementsByClassName('board')[0]; // В функции drawFraction уже есть обращение к доске
 var boardElement = board1.getElementsByTagName('div');
 for (var i = 0; i < size * size; i++) {
 		drawFraction();
